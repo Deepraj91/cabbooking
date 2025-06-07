@@ -1,0 +1,90 @@
+.help-container {
+  padding: 24px;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 0; /* Remove extra top margin if any */
+}
+
+.help-wrapper {
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.help-info {
+  flex: 1;
+  padding: 40px;
+  background-color: #121212;
+  color: #fff;
+}
+
+.help-info h2 {
+  margin-bottom: 20px;
+}
+
+.help-info ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+
+.help-form {
+  flex: 2;
+  padding: 40px;
+}
+
+.help-form h2 {
+  margin-bottom: 20px;
+}
+
+.help-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.help-form input,
+.help-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.help-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.help-form button {
+  padding: 12px 24px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.help-form button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .help-wrapper {
+    flex-direction: column;
+  }
+
+  .help-form .form-row {
+    flex-direction: column;
+  }
+}

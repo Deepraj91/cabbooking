@@ -1,0 +1,100 @@
+# API Documentation
+
+## `POST /api/users/register`
+
+Register a new user account.
+
+### Description
+
+This endpoint allows a new user to register by providing a username, email, and password. On successful registration, a JWT token and user details are returned.
+
+### Request Body
+
+Send a JSON object with the following fields:
+
+```json
+{
+  "username": "string (required)",
+  "email": "string (required, valid email format)",
+  "password": "string (required, minimum 6 characters)"
+}
+```
+
+### Example Request
+
+```json
+{
+  "username": "john_doe",
+  "email": "john@example.com",
+  "password": "securePassword123"
+}
+```
+
+### Responses
+
+| Status Code | Description                                      | Response Body Example                                                                                 |
+|-------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| 201         | User registered successfully                     | `{ "token": "<jwt_token>", "user": { "username": "...", "email": "...", "_id": "..." } }`           |
+| 400         | Validation error (missing/invalid fields)        | `{ "errors": [ { "msg": "...", "param": "...", ... } ] }`                                            |
+| 409         | User already exists with the provided email      | `{ "msg": "User already exists" }`                                                                  |
+| 500         | Internal server error                            | `{ "msg": "Internal server error" }` (not explicitly handled, but possible on server failure)        |
+
+### Notes
+
+- All fields are required.
+- Password must be at least 6 characters.
+- Email must be unique and in a valid format.
+- On success, a JWT token is returned for authentication.
+
+---
+```// filepath: backend/README.md
+
+# API Documentation
+
+## `POST /api/users/register`
+
+Register a new user account.
+
+### Description
+
+This endpoint allows a new user to register by providing a username, email, and password. On successful registration, a JWT token and user details are returned.
+
+### Request Body
+
+Send a JSON object with the following fields:
+
+```json
+{
+  "username": "string (required)",
+  "email": "string (required, valid email format)",
+  "password": "string (required, minimum 6 characters)"
+}
+```
+
+### Example Request
+
+```json
+{
+  "username": "john_doe",
+  "email": "john@example.com",
+  "password": "securePassword123"
+}
+```
+
+### Responses
+
+| Status Code | Description                                      | Response Body Example                                                                                 |
+|-------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| 201         | User registered successfully                     | "token": "<jwt_token>", "user": { "username": "...", "email": "...", "_id": "..." } }`           |
+| 400         | Validation error (missing/invalid fields)        | `{ "errors": [ { "msg": "...", "param": "...", ... } ] }`                                            |
+| 409         | User already exists with the provided email      | `{ "msg": "User already exists" }`                                                                  |
+| 500         | Internal server error                            | `{ "msg": "Internal server error" }` (not explicitly handled, but possible on server failure)        |
+
+### Notes
+
+- All fields are required.
+- Password must be at least 6 characters.
+- Email must be unique and in a valid format.
+- On success, a JWT token is returned for authentication.
+
+---
