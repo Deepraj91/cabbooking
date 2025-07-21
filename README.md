@@ -1,4 +1,3 @@
-
 🚖 Cab Booking Web Application
 A modern, responsive web application for seamless cab booking and ride management. This project enables users to register, book cabs, and track rides in real-time, offering a streamlined experience for both customers and drivers.
 
@@ -51,12 +50,14 @@ cab-booking/
 └── vite.config.js
 
 📦 API Endpoints
-Method	Endpoint	Description
-POST	/api/users/signup	Register a new user
-POST	/api/users/login	Login existing user
-POST	/api/rides	Book a new cab
-GET	/api/rides/:id	Get ride status
-GET	/api/drivers	Get available drivers
+| Method | Endpoint            | Description           |
+| ------ | ------------------- | --------------------- |
+| POST   | `/api/users/signup` | Register a new user   |
+| POST   | `/api/users/login`  | Login existing user   |
+| POST   | `/api/rides`        | Book a new cab        |
+| GET    | `/api/rides/:id`    | Get ride status       |
+| GET    | `/api/drivers`      | Get available drivers |
+
 
 🧑‍💻 Author
 Deepraj Kushwaha
