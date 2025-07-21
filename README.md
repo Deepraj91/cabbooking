@@ -32,22 +32,21 @@ dotenv (Environment variables)
 Nodemon (Development server)
 
 📁 Project Structure
-cab-booking/
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   │   ├── users.js
-│   │   ├── rides.js
-│   │   └── drivers.js
-├── frontend/
-│   └── src/
-│       ├── index.html
-│       ├── styles.css
-│       └── script.js
-├── .env
-├── package.json
-├── README.md
-└── vite.config.js
+| Folder/File      | Path                        | Description                         |
+| ---------------- | --------------------------- | ----------------------------------- |
+| Backend Root     | `backend/`                  | Contains backend code and routes    |
+| Server File      | `backend/server.js`         | Main entry point for the backend    |
+| User Routes      | `backend/routes/users.js`   | Handles user-related endpoints      |
+| Ride Routes      | `backend/routes/rides.js`   | Handles cab booking and ride status |
+| Driver Routes    | `backend/routes/drivers.js` | Manages driver availability         |
+| Frontend Root    | `frontend/src/`             | Contains frontend files             |
+| HTML File        | `frontend/src/index.html`   | Main HTML file                      |
+| CSS File         | `frontend/src/styles.css`   | Custom styles using Tailwind        |
+| JavaScript File  | `frontend/src/script.js`    | Handles frontend interactivity      |
+| Environment File | `.env`                      | Stores environment variables        |
+| Package File     | `package.json`              | Node.js project configuration       |
+| Config File      | `vite.config.js`            | Vite project configuration          |
+| ReadMe           | `README.md`                 | Project overview and documentation  |
 
 📦 API Endpoints
 | Method | Endpoint            | Description           |
